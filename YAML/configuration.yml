@@ -1,0 +1,24 @@
+---
+routers:
+  interfaces:
+    R1:
+        f0/0:
+          description: This is FastEth 0/0 connected to R2 FastEth 0/0
+        f0/1:
+          description: This is FastEth 0/1 connected to Local Host Loopback
+    R2:
+        f0/0:
+          description: This is FastEth 0/0 connected to R1 FastEth 0/0
+        f0/1:
+          description: This is FastEth 0/1 connected to Local Host Loopback
+  routing_protocol:
+    R1:
+      ospf:
+        instance: 1
+        network: '0.0.0.0 255.255.255.255'
+        area: 0
+    R2:
+      ospf:
+        instance: 1
+        network: '0.0.0.0 255.255.255.255'
+        area: 0

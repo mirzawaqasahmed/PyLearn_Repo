@@ -1,0 +1,9 @@
+{% for iface in interface %}
+interface {{ iface }}
+no description {{ interface[iface]['description'] }}
+{% endfor %}
+
+{% for proto in routing %}
+router {{ proto }} {{ routing[proto]['instance'] }}
+network {{ routing[proto]['network'] }} area {{ routing[proto]['area'] }}
+{% endfor %}
