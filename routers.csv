@@ -1,0 +1,3 @@
+hostname,device_type,ip,username,password,secret,verbose
+R1,cisco_ios,192.168.255.101,admin,cisco,cisco,FALSE
+R2,cisco_ios,192.168.255.102,admin,cisco,cisco,FALSE
